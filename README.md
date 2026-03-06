@@ -1,28 +1,32 @@
 # Paper Repro Python Skill
 
-A reusable Codex skill for reproducing research papers in Python with a strict workflow: full-fidelity PDF-to-Markdown extraction first, paper-specific implementation second, and bilingual project documentation third.
+A reusable Codex skill for reproducing research papers in Python with a strict source-priority workflow: read local TeX sources first when available, use full-fidelity PDF-to-Markdown extraction only as fallback, then implement paper-specific code and maintain bilingual project documentation.
 
 ## What This Skill Does
 
-- Extract full paper content from PDF into Markdown without summarization, paraphrasing, or rewriting.
-- Preserve paper structure: sections, equations, theorem blocks, tables, captions, references, and appendices.
-- Plan and implement reproduction in Python based on extracted content, not memory.
+- Prioritize local TeX sources (`.tex`, `.bib`, styles, figures) for paper understanding and reproduction.
+- Fall back to PDF extraction only when TeX sources are missing or incomplete.
+- Preserve original paper content without summarization, paraphrasing, or rewriting scientific statements.
+- Plan and implement reproduction in Python based on source materials, not memory.
 - Enforce modular engineering principles: low coupling, high cohesion, clear boundaries.
+- Encourage module splitting to avoid monolithic files; keep one source file under ~200 lines whenever practical.
 - Generate and maintain both `README.md` (English) and `README_zh-CN.md` (Chinese).
 - Require generated images/figures to be embedded in both README files.
+- Prefer one chart per image file; only use multi-panel combined figures when comparison across panels is necessary.
 
 ## Typical Trigger
 
 Use this skill when your request includes one or more of these goals:
 
-- Read a paper PDF and extract complete content to Markdown.
-- Reproduce the paper in Python.
+- Reproduce a paper from a local TeX project or a PDF.
+- Extract complete paper content to Markdown when PDF fallback is needed.
+- Build a cleanly modular Python reproduction project.
 - Update project docs with bilingual README files and experiment figures.
 
 Example prompt:
 
 ```text
-Use $paper-repro-python. Extract this paper PDF to full Markdown first (no summarization), then reproduce in Python, and update README.md + README_zh-CN.md with generated figures.
+Use $paper-repro-python. If TeX files exist in the folder, read TeX first; otherwise extract this paper PDF to full Markdown (no summarization). Then reproduce in Python with clear modules (avoid monolithic files), and update README.md + README_zh-CN.md with generated figures.
 ```
 
 ## Installation
@@ -88,4 +92,5 @@ paper-repro-python/
 
 - Keep `SKILL.md` as the source of behavior.
 - Keep `agents/openai.yaml` aligned with `SKILL.md` metadata.
+- If TeX and PDF disagree, document the discrepancy and prefer the source that is more complete for the targeted claims.
 - If extraction quality is limited by scanned PDFs/OCR, mark uncertain text explicitly.
