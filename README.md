@@ -1,4 +1,4 @@
-﻿# Paper Repro Python Skill
+# Paper Repro Python Skill
 
 A reusable Codex skill for reproducing research papers in Python with a strict workflow: full-fidelity PDF-to-Markdown extraction first, paper-specific implementation second, and bilingual project documentation third.
 
@@ -53,14 +53,14 @@ If the skill is at repo root:
 
 ```text
 Use $skill-installer and install from:
-https://github.com/<owner>/<repo>/tree/main
+https://github.com/celynnmoonlight/codex-skill-paper-repro-python/tree/main
 ```
 
 If the skill is in a subfolder:
 
 ```text
 Use $skill-installer and install from:
-https://github.com/<owner>/<repo>/tree/main/skills/paper-repro-python
+https://github.com/celynnmoonlight/codex-skill-paper-repro-python/tree/main/skills/paper-repro-python
 ```
 
 If you prefer repo/path form:

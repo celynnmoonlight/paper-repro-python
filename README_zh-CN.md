@@ -53,14 +53,14 @@ cp -R ./paper-repro-python "$HOME/.codex/skills/"
 
 ```text
 使用 $skill-installer，从这个地址安装：
-https://github.com/<owner>/<repo>/tree/main
+https://github.com/celynnmoonlight/codex-skill-paper-repro-python/tree/main
 ```
 
 如果技能在子目录：
 
 ```text
 使用 $skill-installer，从这个地址安装：
-https://github.com/<owner>/<repo>/tree/main/skills/paper-repro-python
+https://github.com/celynnmoonlight/codex-skill-paper-repro-python/tree/main/skills/paper-repro-python
 ```
 
 如果你更习惯 repo/path 形式：
