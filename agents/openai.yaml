@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Repro Python"
+  short_description: "Full PDF->MD extraction then Python repro"
+  default_prompt: "Reproduce this paper with full-fidelity PDF-to-Markdown extraction first, then implement in Python and update README."
