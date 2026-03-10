@@ -1,6 +1,8 @@
 # Paper Repro Python Skill
 
-A reusable Codex skill for reproducing research papers in Python with a strict source-priority workflow: read local TeX sources first when available, use full-fidelity PDF-to-Markdown extraction only as fallback, then implement paper-specific code and maintain bilingual project documentation.
+A reusable skill for reproducing research papers in Python with a strict source-priority workflow: read local TeX sources first when available, use full-fidelity PDF-to-Markdown extraction only as fallback, then implement paper-specific code and maintain bilingual project documentation.
+
+**Compatible with:** Codex, Claude Code, OpenClaw
 
 ## What This Skill Does
 
@@ -32,7 +34,9 @@ Use $paper-repro-python. If TeX files exist in the folder, read TeX first; other
 
 ## Installation
 
-### Option A: Local install (copy to global Codex skills)
+### Codex
+
+#### Option A: Local install (copy to global Codex skills)
 
 Windows (PowerShell):
 
@@ -49,7 +53,7 @@ cp -R ./paper-repro-python "$HOME/.codex/skills/"
 
 Then restart the Codex client.
 
-### Option B: Install from GitHub with `$skill-installer`
+#### Option B: Install from GitHub with `$skill-installer`
 
 1. Ensure the repo path points to a folder containing `SKILL.md`.
 2. In Codex chat, send one of the following commands.
@@ -75,6 +79,32 @@ Use $skill-installer and install from repo openai/skills path skills/.curated/<s
 ```
 
 3. After installation, restart Codex to pick up new skills.
+
+### Claude Code
+
+Copy the skill folder to your project's `.claude/skills/` directory:
+
+```bash
+mkdir -p .claude/skills
+cp -R paper-repro-python .claude/skills/
+```
+
+Or install globally:
+
+```bash
+mkdir -p "$HOME/.claude/skills"
+cp -R paper-repro-python "$HOME/.claude/skills/"
+```
+
+### OpenClaw
+
+Copy the skill folder to OpenClaw's skills directory:
+
+```bash
+cp -R paper-repro-python ~/.openclaw/skills/
+```
+
+Or use OpenClaw's skill installer if available.
 
 ## Directory Layout
 

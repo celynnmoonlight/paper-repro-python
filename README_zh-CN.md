@@ -1,6 +1,8 @@
 # Paper Repro Python 技能
 
-这是一个可复用的 Codex 技能，用于用 Python 复现科研论文，并强制执行“源文件优先”的流程：若目录内有可用 TeX 源文件则优先读取 TeX；仅在 TeX 缺失或关键信息不完整时，才回退到 PDF 全量提取 Markdown；随后进行论文复现并维护双语项目文档。
+这是一个可复用的技能，用于用 Python 复现科研论文，并强制执行”源文件优先”的流程：若目录内有可用 TeX 源文件则优先读取 TeX；仅在 TeX 缺失或关键信息不完整时，才回退到 PDF 全量提取 Markdown；随后进行论文复现并维护双语项目文档。
+
+**兼容平台：** Codex、Claude Code、OpenClaw
 
 ## 这个技能能做什么
 
@@ -32,7 +34,9 @@
 
 ## 安装方式
 
-### 方式 A：本地安装（复制到全局 Codex skills）
+### Codex
+
+#### 方式 A：本地安装（复制到全局 Codex skills）
 
 Windows（PowerShell）：
 
@@ -49,7 +53,7 @@ cp -R ./paper-repro-python "$HOME/.codex/skills/"
 
 完成后重启 Codex 客户端。
 
-### 方式 B：通过 `$skill-installer` 从 GitHub 安装
+#### 方式 B：通过 `$skill-installer` 从 GitHub 安装
 
 1. 确保你提供的仓库路径对应的目录里包含 `SKILL.md`。
 2. 在 Codex 对话中发送以下命令之一。
@@ -75,6 +79,32 @@ https://github.com/celynnmoonlight/paper-repro-python/tree/main/skills/paper-rep
 ```
 
 3. 安装完成后重启 Codex，加载新技能。
+
+### Claude Code
+
+将技能文件夹复制到项目的 `.claude/skills/` 目录：
+
+```bash
+mkdir -p .claude/skills
+cp -R paper-repro-python .claude/skills/
+```
+
+或全局安装：
+
+```bash
+mkdir -p "$HOME/.claude/skills"
+cp -R paper-repro-python "$HOME/.claude/skills/"
+```
+
+### OpenClaw
+
+将技能文件夹复制到 OpenClaw 的 skills 目录：
+
+```bash
+cp -R paper-repro-python ~/.openclaw/skills/
+```
+
+或使用 OpenClaw 的技能安装器（如有）。
 
 ## 目录结构
 
