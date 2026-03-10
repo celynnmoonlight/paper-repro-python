@@ -7,7 +7,7 @@ metadata:
     emoji: "📄"
 ---
 
-Follow this workflow end-to-end unless the user explicitly asks to skip steps.
+# Follow this workflow end-to-end unless the user explicitly asks to skip steps
 
 ## 1) Intake and scope
 
@@ -88,6 +88,7 @@ Follow this workflow end-to-end unless the user explicitly asks to skip steps.
   - Authors: keep original names and affiliations; translate country/region names if needed.
   - Abstract: provide faithful Chinese translation of the abstract.
 - Format example (English README):
+
   ```markdown
   # [Paper Title]
 
