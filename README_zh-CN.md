@@ -9,8 +9,9 @@
 - 保留论文原始内容，不允许总结、改写或篡改科学表述。
 - 基于源材料（而不是记忆）制定并实现 Python 复现实验。
 - 强制工程实现遵循低耦合、高内聚、边界清晰。
-- 鼓励按职责拆分模块，避免“所有代码写在一起”；单个源码文件尽量控制在约 200 行以内。
+- 鼓励按职责拆分模块，避免”所有代码写在一起”；单个源码文件尽量控制在约 200 行以内。
 - 生成并维护 `README.md`（英文）和 `README_zh-CN.md`（中文）。
+- 要求 README 文件开头必须包含论文元信息：标题、作者（含单位和邮箱）、摘要原文。
 - 要求在两个 README 中都插入生成的图片/实验图（Markdown 相对路径）。
 - 图片输出粒度默认一图一文件；仅在确实需要多图对比时才使用拼图（多子图合并）。
 
@@ -57,14 +58,14 @@ cp -R ./paper-repro-python "$HOME/.codex/skills/"
 
 ```text
 使用 $skill-installer，从这个地址安装：
-https://github.com/celynnmoonlight/codex-skill-paper-repro-python/tree/main
+https://github.com/celynnmoonlight/paper-repro-python/tree/main
 ```
 
 如果技能在子目录：
 
 ```text
 使用 $skill-installer，从这个地址安装：
-https://github.com/celynnmoonlight/codex-skill-paper-repro-python/tree/main/skills/paper-repro-python
+https://github.com/celynnmoonlight/paper-repro-python/tree/main/skills/paper-repro-python
 ```
 
 如果你更习惯 repo/path 形式：

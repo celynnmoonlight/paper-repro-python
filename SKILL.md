@@ -1,6 +1,10 @@
 ---
 name: paper-repro-python
-description: "Reproduce research papers in Python with source-priority extraction: prefer local TeX sources when available, otherwise perform full-fidelity PDF-to-Markdown extraction before implementation. Use when tasks include paper-source ingestion, faithful method reproduction in Python, modular code design, and bilingual project documentation."
+description: This skill should be used when the user asks to "reproduce a paper", "implement paper methods in Python", "extract paper content to Markdown", or works on paper reproduction tasks. Use for TeX-first extraction, modular Python implementation, and bilingual documentation.
+version: 1.0.0
+metadata:
+  openclaw:
+    emoji: "📄"
 ---
 
 Follow this workflow end-to-end unless the user explicitly asks to skip steps.
@@ -73,12 +77,40 @@ Follow this workflow end-to-end unless the user explicitly asks to skip steps.
   - explicit config for key hyperparameters,
   - clear experiment entry points.
 
-## 6) README update requirements (bilingual + images)
+## 6) README header requirements (paper metadata)
+
+- Every reproduction project README must start with paper metadata before any other content:
+  - **Paper title** (original title as published)
+  - **Authors** (full names, affiliations, and email addresses if available)
+  - **Abstract** (verbatim copy of the original abstract)
+- For `README_zh-CN.md`:
+  - Paper title: provide Chinese translation if original is in English; keep original if paper is in Chinese.
+  - Authors: keep original names and affiliations; translate country/region names if needed.
+  - Abstract: provide faithful Chinese translation of the abstract.
+- Format example (English README):
+  ```markdown
+  # [Paper Title]
+
+  **Authors:** Author Name¹, Co-Author Name²
+  **Affiliations:**
+  ¹ Department, University, Country (email@university.edu)
+  ² Lab, Institution, Country (email@institution.edu)
+
+  ## Abstract
+
+  [Verbatim abstract text from the paper]
+
+  ---
+
+  [Then reproduction project content begins...]
+  ```
+
+## 7) README update requirements (bilingual + images)
 
 - Generate and maintain two README files after code changes:
   - `README.md` (English original)
   - `README_zh-CN.md` (Chinese translation aligned with the English version)
-- Ensure both files include:
+- After the paper metadata header, ensure both files include:
   - paper citation and target claims to reproduce,
   - environment/setup commands,
   - project structure overview and module responsibilities,
@@ -90,7 +122,7 @@ Follow this workflow end-to-end unless the user explicitly asks to skip steps.
 - Keep both README files aligned with actual code paths and commands.
 - Keep Chinese content as faithful translation of English technical content (no missing key steps).
 
-## 7) Output contract
+## 8) Output contract
 
 - Deliver:
   - source-derived extraction notes/file(s) (TeX-first, PDF fallback when needed),
@@ -99,3 +131,6 @@ Follow this workflow end-to-end unless the user explicitly asks to skip steps.
 - Clearly separate:
   - exact extracted content (verbatim from source),
   - your implementation notes and engineering decisions.
+- Report reproduction status:
+  - which claims/experiments were successfully reproduced,
+  - known gaps or deviations from paper results, with reasons.

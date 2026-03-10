@@ -2,3 +2,5 @@ interface:
   display_name: "Paper Repro Python"
   short_description: "TeX-first repro; PDF->MD fallback"
   default_prompt: "Reproduce this paper by reading local TeX sources first when available; if not, perform full-fidelity PDF-to-Markdown extraction, then implement modular Python code and update bilingual README files. Save figures as one chart per image file unless multi-panel comparison is necessary."
+policy:
+  allow_implicit_invocation: true

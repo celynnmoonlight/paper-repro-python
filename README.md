@@ -11,6 +11,7 @@ A reusable Codex skill for reproducing research papers in Python with a strict s
 - Enforce modular engineering principles: low coupling, high cohesion, clear boundaries.
 - Encourage module splitting to avoid monolithic files; keep one source file under ~200 lines whenever practical.
 - Generate and maintain both `README.md` (English) and `README_zh-CN.md` (Chinese).
+- Require README files to start with paper metadata: title, authors (with affiliations and emails), and abstract.
 - Require generated images/figures to be embedded in both README files.
 - Prefer one chart per image file; only use multi-panel combined figures when comparison across panels is necessary.
 
@@ -57,14 +58,14 @@ If the skill is at repo root:
 
 ```text
 Use $skill-installer and install from:
-https://github.com/celynnmoonlight/codex-skill-paper-repro-python/tree/main
+https://github.com/celynnmoonlight/paper-repro-python/tree/main
 ```
 
 If the skill is in a subfolder:
 
 ```text
 Use $skill-installer and install from:
-https://github.com/celynnmoonlight/codex-skill-paper-repro-python/tree/main/skills/paper-repro-python
+https://github.com/celynnmoonlight/paper-repro-python/tree/main/skills/paper-repro-python
 ```
 
 If you prefer repo/path form:
