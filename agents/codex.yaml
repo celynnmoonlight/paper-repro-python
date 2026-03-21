@@ -1,0 +1,6 @@
+interface:
+  display_name: "Paper Repro Python"
+  short_description: "TeX-first repro; logging; result verification"
+  default_prompt: "Reproduce this paper by reading local TeX sources first; then check for user-preprocessed documents (.md, .json, images); only fall back to PDF extraction if needed. Implement modular Python code, save execution logs and output data, compare results against paper-reported metrics, and update bilingual README files. Save figures as one chart per image file unless multi-panel comparison is necessary."
+policy:
+  allow_implicit_invocation: true
